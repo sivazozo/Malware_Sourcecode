@@ -1,0 +1,9 @@
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\bin\Debug\Springbeep.exe.config
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\bin\Debug\Springbeep.exe
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\bin\Debug\Springbeep.pdb
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\obj\Debug\Springbeep.Form1.resources
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\obj\Debug\Springbeep.Properties.Resources.resources
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\obj\Debug\Springbeep.csproj.GenerateResource.Cache
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\obj\Debug\Springbeep.csproj.CoreCompileInputs.cache
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\obj\Debug\Springbeep.exe
+C:\Users\Fltend\source\repos\Springbeep\Springbeep\obj\Debug\Springbeep.pdb

